@@ -13,19 +13,24 @@ class Login extends CI_Controller {
     }
 
     public function evaluar(){
-         $usuario = $this->input->post('usuario');
-         $password = $this->input->post('password');
+         $usua_login = $this->input->post('usua_login');
+         $usua_password = $this->input->post('usua_password');
+         $usua_esadmin = $this->input->get('usua_esadmin');
 
-         $result=$this->db->query("SELECT *FROM persona WHERE usuario='{$usuario}' AND password ='{$password}'");
+       
+         $result=$this->db->query("SELECT *FROM usuario WHERE usua_login='{$usua_login}' AND usua_password ='{$usua_password}'");
+          $result2=$this->db->query("SELECT *FROM usuario WHERE usua_esadmin='{$usua_esadmin}'");
         if($result -> num_rows()>0){
              $row = $result->row();
-              echo "bienvenido {$row->usuario}";
-              $data=array('user'=>$row->usuario,'id'=>$row->id,'auth'=>true);
+              echo "bienvenido {$row->usua_login}";
+              $data=array('usua_login'=>$row->usua_login,'usua_esadmin'=>$row->usua_esadmin,'auth'=>true);
              $this->session->set_userdata($data);
-             redirect();
-
+                redirect();      
         }else{
+
             echo "incorrecto";
+            redirect('Login');
+
         }
     }
     public function formulario()
@@ -35,15 +40,13 @@ class Login extends CI_Controller {
     }
     
     public function guardar(){
-        $usuario =$this->input->post('usuario');
-        $password =$this->input->post('password');
-        $edad =$this->input->post('edad');
+        $usua_login =$this->input->post('usua_login');
+        $usua_password =$this->input->post('usua_password');
 
         $this->load->model('model_usuario');
         $data=array(
-            'usuario'=>$usuario,
-            'password'=>$password,
-            'edad'=>$edad);
+            'usua_login'=>$usua_login,
+            'usua_password'=>$usua_password);
 
         $this->model_usuario->guardar($data);
         redirect('Login');

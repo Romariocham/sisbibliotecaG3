@@ -9,12 +9,12 @@
    
    </thead>
    <tbody>
-   <?php foreach ($persona as $row):?>
+   <?php foreach ($usuario as $row):?>
       <tr>
-         <td> <?php echo $row->id; ?></td>
+         <td> <?php echo $row->usua_id; ?></td>
         <!-- <td> <?php echo $row->nombres; ?></td> -->
-         <td> <?php echo $row->usuario; ?></td>
-         <td> <?php echo $row->password; ?></td>
+         <td> <?php echo $row->usua_login; ?></td>
+         <td> <?php echo $row->usua_password; ?></td>
       </tr>
    <?php endforeach; ?>
    </tbody>

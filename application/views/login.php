@@ -8,12 +8,12 @@
 <body>
     <form action="<?php echo base_url('Login/evaluar')?>" method="post">
        <p>
-         <label for="usuario">usuario</label>
-         <input type="text" name="usuario">
+         <label for="usua_login">usuario</label>
+         <input type="text" name="usua_login">
        </p>
        <p>
-         <label for="password">password</label>
-         <input type="password" name="password">
+         <label for="usua_password">password</label>
+         <input type="password" name="usua_password">
        </p>
        <p>
          <input type="submit" value="ingresar">

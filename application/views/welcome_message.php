@@ -1,1 +1,1 @@
-hola <?php echo $this->session->userdata('user'); ?>
+bienvenido <?php echo $this->session->userdata('usua_login'); ?>
