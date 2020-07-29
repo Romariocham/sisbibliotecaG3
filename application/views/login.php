@@ -19,5 +19,10 @@
          <input type="submit" value="ingresar">
        </p>
     </form>
-</body>
+
+    <a href="<?php echo base_url('Login/formulario')?>">
+            <button class="btn-login" type="submit"> Registrarse </button>
+          </a>
+          
+  </body>
 </html>

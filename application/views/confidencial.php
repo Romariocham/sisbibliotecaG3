@@ -1,6 +1,7 @@
-<p>
+<!-- <p>
    Nombres : <?php echo $persona->nombres; ?>
    </p>
+-->
    <p>
    usario : <?php echo $persona->usuario; ?>
    </p>
