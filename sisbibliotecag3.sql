@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-07-2020 a las 16:12:08
--- Versión del servidor: 10.4.8-MariaDB
--- Versión de PHP: 7.3.11
+-- Tiempo de generación: 29-07-2020 a las 07:16:07
+-- Versión del servidor: 10.4.13-MariaDB
+-- Versión de PHP: 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -119,6 +118,29 @@ CREATE TABLE `historial` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `persona`
+--
+
+CREATE TABLE `persona` (
+  `id` int(11) NOT NULL,
+  `usuario` varchar(40) NOT NULL,
+  `password` varchar(40) NOT NULL,
+  `edad` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `persona`
+--
+
+INSERT INTO `persona` (`id`, `usuario`, `password`, `edad`) VALUES
+(1, 'alvaro', 'alvaro123', 18),
+(2, 'admin', 'elefante', 17),
+(3, 'romario', 'romario123', 19),
+(4, 'carlos', 'carlos123', 28);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `peticion`
 --
 
@@ -165,6 +187,13 @@ CREATE TABLE `usuario` (
   `usua_telefono` varchar(20) DEFAULT NULL,
   `usua_esadmin` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`usua_id`, `usua_login`, `usua_password`, `usua_codigo`, `usua_nombres`, `usua_apellidos`, `usua_direccion`, `usua_email`, `usua_telefono`, `usua_esadmin`) VALUES
+(1, 'alvaro', 'alvaro123', 1, NULL, NULL, NULL, NULL, NULL, 1);
 
 --
 -- Índices para tablas volcadas
@@ -218,6 +247,12 @@ ALTER TABLE `historial`
   ADD KEY `fk_historial_usuario1_idx` (`histo_usua_id`);
 
 --
+-- Indices de la tabla `persona`
+--
+ALTER TABLE `persona`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `peticion`
 --
 ALTER TABLE `peticion`
@@ -268,6 +303,12 @@ ALTER TABLE `ejemplar_tipo`
   MODIFY `tipo_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de la tabla `persona`
+--
+ALTER TABLE `persona`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT de la tabla `peticion`
 --
 ALTER TABLE `peticion`
@@ -283,7 +324,7 @@ ALTER TABLE `prestamo`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `usua_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `usua_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas
