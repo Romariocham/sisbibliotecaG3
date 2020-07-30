@@ -1,7 +1,7 @@
 <h1>Registrate - Ingrese los datos</h1>
 <button class = "btn btn danger"><i class="fa fa-user-plus" aria-hidden="true"></i></button>
 
-<form method="post" action="<?php echo base_url('Login/guardar') ?>">
+<form method="post" action="<?php echo base_url('Login/guardar1') ?>">
   
   <div class="form-group">
     <label>nombre de usuario</label>

@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-07-2020 a las 07:16:07
--- Versión del servidor: 10.4.13-MariaDB
--- Versión de PHP: 7.4.7
+-- Tiempo de generación: 30-07-2020 a las 17:53:21
+-- Versión del servidor: 10.4.8-MariaDB
+-- Versión de PHP: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -44,6 +45,14 @@ CREATE TABLE `categoria` (
   `cate_id` int(11) NOT NULL,
   `cate_nombre` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `categoria`
+--
+
+INSERT INTO `categoria` (`cate_id`, `cate_nombre`) VALUES
+(1, 'novelas'),
+(2, 'novelas');
 
 -- --------------------------------------------------------
 
@@ -136,7 +145,8 @@ INSERT INTO `persona` (`id`, `usuario`, `password`, `edad`) VALUES
 (1, 'alvaro', 'alvaro123', 18),
 (2, 'admin', 'elefante', 17),
 (3, 'romario', 'romario123', 19),
-(4, 'carlos', 'carlos123', 28);
+(4, 'carlos', 'carlos123', 28),
+(5, '123', '123', 123);
 
 -- --------------------------------------------------------
 
@@ -185,7 +195,7 @@ CREATE TABLE `usuario` (
   `usua_direccion` varchar(150) DEFAULT NULL,
   `usua_email` varchar(70) DEFAULT NULL,
   `usua_telefono` varchar(20) DEFAULT NULL,
-  `usua_esadmin` tinyint(1) DEFAULT NULL
+  `usua_esadmin` tinyint(1) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -193,7 +203,12 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`usua_id`, `usua_login`, `usua_password`, `usua_codigo`, `usua_nombres`, `usua_apellidos`, `usua_direccion`, `usua_email`, `usua_telefono`, `usua_esadmin`) VALUES
-(1, 'alvaro', 'alvaro123', 1, NULL, NULL, NULL, NULL, NULL, 1);
+(1, 'alvaro', 'alvaro123', NULL, 'alvaro', 'catari ', 'Jron Arequipa', 'alvarocatari@gmail.com', '987654321', 1),
+(2, 'carlos', 'carlos123', NULL, 'carlos', 'ayala', 'Jron Lima', 'carlosayala@gmail.com', '987564321', 1),
+(3, 'romario', 'romario123', NULL, 'romario', 'chambi', 'Jron Ejercicio', 'romariochambi@gmail.com', '987654312', 1),
+(4, 'eliana', 'eliana123', NULL, 'eliana', 'mamani', 'Jron Los angeles', 'elianamamani@gmail.com', '978654321', 1),
+(9, 'naomi', 'naomi123', NULL, 'naomi', 'torres', 'jron lampa', 'naomitorres@gmail.com', '987645321', 0),
+(11, 'jose', 'jose123', NULL, 'jose ', 'mamani', 'Av Costanera ', 'josemamani@gmail.com', '912387654', 0);
 
 --
 -- Índices para tablas volcadas
@@ -288,7 +303,7 @@ ALTER TABLE `autor`
 -- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `cate_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `ejemplar`
@@ -306,7 +321,7 @@ ALTER TABLE `ejemplar_tipo`
 -- AUTO_INCREMENT de la tabla `persona`
 --
 ALTER TABLE `persona`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `peticion`
@@ -324,7 +339,7 @@ ALTER TABLE `prestamo`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `usua_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `usua_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Restricciones para tablas volcadas

@@ -1,28 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-    <form action="<?php echo base_url('Login/evaluar')?>" method="post">
-       <p>
-         <label for="usua_login">usuario</label>
-         <input type="text" name="usua_login">
-       </p>
-       <p>
-         <label for="usua_password">password</label>
-         <input type="password" name="usua_password">
-       </p>
-       <p>
-         <input type="submit" value="ingresar">
-       </p>
-    </form>
 
+    <form action="<?php echo base_url('Login/evaluar')?>" method="post">
+        <div class="form-group">
+          <label>nombre de usuario</label>
+          <input type="text" class="form-control" name="usua_login" placeholder="Ingrese los nombres">
+        </div>
+         <div class="form-group">
+          <label>password</label>
+          <input type="password" class="form-control" name="usua_password" placeholder="Ingrese la contraseña">
+      </div>
+      <button type="submit" class="btn btn-primary">Ingresar</button>
+    </form>
+    <br>
     <a href="<?php echo base_url('Login/formulario')?>">
-            <button class="btn-login" type="submit"> Registrarse </button>
-          </a>
-          
-  </body>
-</html>
+        <button type="submit" class="btn btn-primary">Registrarse</button>
+          <!-- <button class="btn-login" type="submit"> Registrarse </button> -->
+    </a>
+   
