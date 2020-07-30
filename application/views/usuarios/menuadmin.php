@@ -1,7 +1,10 @@
-
-    <ul>
-       <li><a href="<?php echo base_url() ?>">inicio</a></li>
-       <li><a href="<?php echo base_url('Welcome/confidencial2') ?>">usuarios</a></li>
-       <li><a href="<?php echo base_url('Categorias') ?>">categorias</a></li>
-       <li><a href="<?php echo base_url('Login/salir') ?>">logout</a></li>
-    </ul>
+<nav class="navbar navbar-expand-lg  navbar-primary" style="background-color: #e3f2fd;" >
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+       <a class="nav-item nav-link" href="<?php echo base_url() ?>">INICIO</a>
+       <a class="nav-item nav-link" href="<?php echo base_url('Welcome/confidencial2') ?>">USUARIOS</a>
+       <a class="nav-item nav-link" href="<?php echo base_url('Categorias') ?>">CATEGORIAS</a>
+       <a class="nav-item nav-link" href="<?php echo base_url('Login/salir') ?>">SALIR</a>
+     </div>
+  </div>
+</nav>
