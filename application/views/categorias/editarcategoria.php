@@ -4,6 +4,7 @@
 <form method="post" action="<?=base_url('Categorias/editarRegistro/')?><?=$idcate?>">
   
   <div class="form-group">
+    <label>Nombre la Categoria</label>
     <label>Nombre de usuario</label>
 	<input type="text" class="form-control" size="40" name="cate_nombre" id="cate_nombre" value="<?=$usercate?>">
   </div>

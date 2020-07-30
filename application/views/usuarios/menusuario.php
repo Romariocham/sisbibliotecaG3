@@ -1,10 +1,11 @@
 
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" href="<?php echo base_url() ?>">INICIO<span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="<?php echo base_url('Categorias') ?>">Categorias</a>
-      <a class="nav-item nav-link" href="<?php echo base_url('Login/salir') ?>">SALIR</a>
-       </div>
-  </div>
-</nav>
+    <ul>
+       <li><a href="<?php echo base_url() ?>">inicio</a></li>
+<<<<<<< HEAD
+       <li><a href="<?php echo base_url('Categorias') ?>">Categorias</a></li>      
+=======
+       <li><a href="<?php echo base_url('Categorias') ?>">Categorias</a></li>
+       <li><a href="<?php echo base_url('Welcome/confidencial') ?>">Info</a></li>       
+>>>>>>> 68bebaf1bed64946f9c20a3f7a4778bfc10b43c2
+       <li><a href="<?php echo base_url('Login/salir') ?>">salir</a></li>
+    </ul>

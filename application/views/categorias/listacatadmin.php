@@ -14,8 +14,9 @@
         <td><?php echo $row->cate_id; ?></td>
         <td><?php echo $row->cate_nombre; ?></td>
 
-        <td ><a href="<?php  echo base_url();?>Ejemplar/listaejemplar?cate_id=<?php echo $row->cate_id;?>" >
-        ir</a></td>
+        <td ><a href="<?php  echo base_url();?>Ejemplar/listaejemplar?">
+        ir</a>
+      </td>
         <td ><a href="<?php  echo base_url();?>Categorias/editar?cate_id=<?php echo $row->cate_id;?>" >
         Editar</a>
         </td>
@@ -28,6 +29,3 @@
 <a href="<?php echo base_url('Categorias/insertar')?>">
         <button type="submit" class="btn btn-primary">Insertar nueva categoria</button>
     </a>
-
-
-

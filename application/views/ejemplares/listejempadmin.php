@@ -2,30 +2,33 @@
    <thead>
      <tr>
         <th>id</th>
+        <th>titulo</th>
+        <th>editorial</th>
+        <th>año</th>
+        <th>pagina</th>
         <th>categorias</th>
         <th colspan='2'>opciones</th>
      </tr>
      
    </thead>
    <tbody>
-   <?php foreach ($categoria as $row):?>
+   <?php foreach ($ejemplar as $row):?>
       <tr>
-        <td><?php echo $row->cate_id; ?></td>
-        <td><?php echo $row->cate_nombre; ?></td>
-        <td ><a href="<?php  echo base_url();?>Categorias/ver?cate_id=<?php echo $row->cate_id;?>" >
-        ir</a></td>
-        <td ><a href="<?php  echo base_url();?>Categorias/editar?cate_id=<?php echo $row->cate_id;?>" >
+        <td><?php echo $row->ejem_id; ?></td>
+        <td><?php echo $row->ejem_titulo; ?></td>
+        <td><?php echo $row->ejem_editorial; ?></td>
+        <td><?php echo $row->ejem_anio; ?></td>
+        <td><?php echo $row->ejem_paginas; ?></td>
+        <td ><a href="<?php  echo base_url();?>Ejemplar/editar?ejem_id=<?php echo $row->ejem_id;?>" >
         Editar</a>
         </td>
-        <td ><a href="<?php  echo base_url();?>Categorias/eliminar?cate_id=<?php echo $row->cate_id;?>" >Eliminar</a></td> 
+        <td ><a href="<?php  echo base_url();?>Ejemplar/eliminar?ejem_id=<?php echo $row->ejem_id;?>" >Eliminar</a>
+        </td> 
       </tr>
-   <?php endforeach; ?>
+          <?php endforeach; ?>
    </tbody>
 </table>
 <br>
-<a href="<?php echo base_url('Categorias/insertar')?>">
-        <button type="submit" class="btn btn-primary">Insertar nuevo Ejemplar</button>
+ <a href="<?php echo base_url('Ejemplar/insertar')?>">
+        <button type="submit" class="btn btn-primary">Insertar nuevo ejemplar</button>
     </a>
-
-
-

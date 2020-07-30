@@ -39,19 +39,23 @@ class Categorias extends CI_Controller {
     public function listacategoria()
     {   
         $data['categoria'] = $this->db->query("SELECT * FROM categoria")->result();
-         if($this->session->userdata('usua_esadmin')!=true){
 
             $this->load->view('header');
             $this->load->view('usuarios/menuadmin');
             $this->load->view('categorias/listacatadmin',$data);
             $this->load->view('footer');
-         }else {
+
+    }
+    public function listacategoria1()
+    {
+        $data['categoria'] = $this->db->query("SELECT * FROM categoria")->result();
+
             $this->load->view('header');
-            $this->load->view('usuarios/menuadmin');
+            $this->load->view('usuarios/menusuario');
             $this->load->view('categorias/listacatuser',$data);
             $this->load->view('footer');
-        }
     }
+
     public function editarcategoria(){
         $this->load->model('model_categoria');
         $result=  $this->model_categoria->consultar(); 
