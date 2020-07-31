@@ -1,20 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
-<<<<<<< HEAD
--- Tiempo de generación: 31-07-2020 a las 00:04:56
+-- Tiempo de generación: 31-07-2020 a las 02:12:56
 -- Versión del servidor: 10.4.13-MariaDB
 -- Versión de PHP: 7.4.7
-=======
--- Tiempo de generación: 30-07-2020 a las 17:53:21
--- Versión del servidor: 10.4.8-MariaDB
--- Versión de PHP: 7.3.11
->>>>>>> 68bebaf1bed64946f9c20a3f7a4778bfc10b43c2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -57,15 +50,10 @@ CREATE TABLE `categoria` (
 --
 
 INSERT INTO `categoria` (`cate_id`, `cate_nombre`) VALUES
-<<<<<<< HEAD
 (1, 'historias'),
 (2, 'inteligencia artificial'),
 (7, 'base de datos'),
 (9, 'sistemas duros');
-=======
-(1, 'novelas'),
-(2, 'novelas');
->>>>>>> 68bebaf1bed64946f9c20a3f7a4778bfc10b43c2
 
 -- --------------------------------------------------------
 
@@ -224,22 +212,13 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`usua_id`, `usua_login`, `usua_password`, `usua_codigo`, `usua_nombres`, `usua_apellidos`, `usua_direccion`, `usua_email`, `usua_telefono`, `usua_esadmin`) VALUES
-<<<<<<< HEAD
-(1, 'alvaro', 'alvaro123', NULL, 'alvaro', 'catari ', 'Jron Arequipa', 'alvarocatari@gmail.com', '11111111', 1),
+(1, 'alvaro', 'alvaro123', NULL, 'alvaro', 'catari ', 'Jron Arequipa', 'alvarocatari@gmail.com', '111111112', 1),
 (2, 'carlos', 'carlos123', NULL, 'carlos', 'ayala', 'Jron Lima', 'carlosayala@gmail.com', '987564321', 1),
 (3, 'romario', 'romario123', NULL, 'romario', 'chambi', 'Jron Ejercicio', 'romariochambi@gmail.com', '987654312', 1),
 (4, 'eliana', 'eliana123', NULL, 'eliana', 'mamani', 'Jron Los angeles', 'elianamamani@gmail.com', '978654321', 1),
 (12, 'naomi', 'naomi123', NULL, 'naomi', 'lopez ', 'Jron Puerto', 'naomilopez@gmail.com', '987652341', 0),
 (13, 'maria', 'maria123', NULL, 'maria', 'tamisa ', 'Jron Loreto', 'mariatamisa@gmail.com', '987652111', 0),
-(14, 'skot', 'skot123', NULL, 'skot', 'mamani', 'Jron lampa', 'skotmamani@gmail.com', '987612341', 0);
-=======
-(1, 'alvaro', 'alvaro123', NULL, 'alvaro', 'catari ', 'Jron Arequipa', 'alvarocatari@gmail.com', '987654321', 1),
-(2, 'carlos', 'carlos123', NULL, 'carlos', 'ayala', 'Jron Lima', 'carlosayala@gmail.com', '987564321', 1),
-(3, 'romario', 'romario123', NULL, 'romario', 'chambi', 'Jron Ejercicio', 'romariochambi@gmail.com', '987654312', 1),
-(4, 'eliana', 'eliana123', NULL, 'eliana', 'mamani', 'Jron Los angeles', 'elianamamani@gmail.com', '978654321', 1),
-(9, 'naomi', 'naomi123', NULL, 'naomi', 'torres', 'jron lampa', 'naomitorres@gmail.com', '987645321', 0),
-(11, 'jose', 'jose123', NULL, 'jose ', 'mamani', 'Av Costanera ', 'josemamani@gmail.com', '912387654', 0);
->>>>>>> 68bebaf1bed64946f9c20a3f7a4778bfc10b43c2
+(17, 'skot', 'skot123', NULL, 'skot', 'mamani', 'jron lampa', 'skotmamani@gmail.com', '999999999', 0);
 
 --
 -- Índices para tablas volcadas
@@ -334,11 +313,7 @@ ALTER TABLE `autor`
 -- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-<<<<<<< HEAD
   MODIFY `cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-=======
-  MODIFY `cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
->>>>>>> 68bebaf1bed64946f9c20a3f7a4778bfc10b43c2
 
 --
 -- AUTO_INCREMENT de la tabla `ejemplar`
@@ -374,11 +349,7 @@ ALTER TABLE `prestamo`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-<<<<<<< HEAD
-  MODIFY `usua_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
-=======
-  MODIFY `usua_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
->>>>>>> 68bebaf1bed64946f9c20a3f7a4778bfc10b43c2
+  MODIFY `usua_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Restricciones para tablas volcadas

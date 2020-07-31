@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/bootstrap4/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/all.min.css">
 </head>
-<body>
-	
+
+	<body>
+
 	<div class = "container">

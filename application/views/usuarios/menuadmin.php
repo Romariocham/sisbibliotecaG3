@@ -5,3 +5,4 @@
        <li><a href="<?php echo base_url('Categorias') ?>">categorias</a></li>
        <li><a href="<?php echo base_url('Login/salir') ?>">logout</a></li>
     </ul>
+a
