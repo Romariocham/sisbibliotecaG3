@@ -18,7 +18,7 @@ class Welcome extends CI_Controller {
 		if($this->session->userdata('usua_esadmin')!=true){
 			$this->load->view('header');
 			$this->load->view('usuarios/menusuario');
-			$this->load->view('welcome_message');
+			$this->load->view('welcome_message_usuario');
 			$this->load->view('footer');
 		}
 		else {
