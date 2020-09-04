@@ -1,4 +1,4 @@
-<?php
+<?<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Ejemplar extends CI_Controller {
@@ -114,11 +114,7 @@ class Ejemplar extends CI_Controller {
                          
                 }else{              
                     $this->model_ejemplar->guardar($data);             
-<<<<<<< HEAD
-                    redirect('Ejemplar/guardar');
-=======
                     redirect('ejemplar/listaejemplar');
->>>>>>> 96400fc2a08e3d8d5c2704822a6319a302d6703d
                     //$this->load->view('borrador_2_mensaje_exito');
                 }
 
