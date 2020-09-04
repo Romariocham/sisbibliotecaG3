@@ -105,13 +105,4 @@ echo form_open('ejemplar/guardar');
 echo '<br>';
 
 */
-<<<<<<< HEAD
-?>
 
-
-
-
-
-=======
-?>
->>>>>>> ccf7c9aedbce92c444de29d2da23dbf720df8854

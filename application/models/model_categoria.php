@@ -40,14 +40,7 @@ class Model_categoria extends CI_Model {
         }
         return $opciones;
         }
-        public function getCategorias(){ 
-        $rows = $this->db->get('categoria')->result(); 
-        $opciones=array();
-        foreach ($rows as $key => $row) {
-        $opciones[$row->cate_id] = $row->cate_nombre;
-        }
-        return $opciones;
-        }
+   
 }
 
 
