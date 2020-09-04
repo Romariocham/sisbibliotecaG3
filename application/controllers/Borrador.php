@@ -74,9 +74,9 @@ $this->form_validation->set_rules($config);
         }
         
         public function borrador_tabla(){
-            $this->load->view('header');
-            $this->load->view('web_borrador');
-            $this->load->view('footer');
+      
+            $this->load->view('ejemplares/eliminar');
+  
         }
 }
 

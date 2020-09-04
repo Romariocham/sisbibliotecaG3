@@ -133,7 +133,7 @@ class Ejemplar extends CI_Controller {
             $this->load->view('ejemplares/listejempadmin',$data);
             $this->load->view('footer');
     }
-    public function listaejemplar1()//modificado jcaapyap
+    public function listaejemplar1()
     {
         //$data['ejemplar'] = $this->db->query("SELECT * FROM ejemplar")->result();
         $data['ejemplar']=$this->db->query("SELECT * FROM  ejemplar,categoria WHERE ejem_cate_id=cate_id")->result();
