@@ -3,7 +3,7 @@
      <tr>
         <th>id</th>
         <th>categorias</th>
-        <th>ir</th>
+        <th>Ingresar</th>
      </tr>
    
    </thead>

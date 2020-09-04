@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/all.min.css">
 </head>
 
-	<body style="background-image: url(https://i.pinimg.com/originals/6c/c0/99/6cc099776c601f985b73b15a338d393e.jpg);">
+	<!-- <body style="background-image: url(https://i.pinimg.com/originals/6c/c0/99/6cc099776c601f985b73b15a338d393e.jpg);"> -->
+	<body >
 
 	<div class = "container">

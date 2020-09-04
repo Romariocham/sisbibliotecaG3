@@ -4,8 +4,8 @@ class Model_ejemplar extends CI_Model {
 
         public function consultar()
         {
-                $query = $this->db->get('ejemplar', 10);
-                return $query->result();
+        $query = $this->db->get('ejemplar', 10);
+        return $query->result();
 
         }
 
@@ -13,11 +13,9 @@ class Model_ejemplar extends CI_Model {
        	$this->db->insert('ejemplar',$data);
        }
        
-       public function eliminar($id)
-		{
-
-			return $this->db->query("DELETE FROM ejemplar WHERE ejem_id='$id'");
-		}
+       public function eliminar($id){
+       return $this->db->query("DELETE FROM ejemplar WHERE ejem_id='$id'");
+	   }
 
         public function obtenerEnlace($id){
             $this->db->where('ejem_id',$id);

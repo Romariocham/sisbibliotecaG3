@@ -3,37 +3,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
 
-	public function index()
-	{
-         
-        $this->load->view('header');
-        $this->load->view('login');
-        $this->load->view('footer');
-
-
+	public function index(){         
+    $this->load->view('header');
+    $this->load->view('login');
+    $this->load->view('footer');
     }
 
     public function evaluar(){
          $usua_login = $this->input->post('usua_login');
          $usua_password = $this->input->post('usua_password');
-         $usua_esadmin = $this->input->get('usua_esadmin');
-
-       
-         $result=$this->db->query("SELECT *FROM usuario WHERE usua_login='{$usua_login}' AND usua_password ='{$usua_password}'");
-          $result2=$this->db->query("SELECT *FROM usuario WHERE usua_esadmin='{$usua_esadmin}'");
-        if($result -> num_rows()>0){
-             $row = $result->row();
-              echo "bienvenido {$row->usua_login}";
-              $data=array('usua_login'=>$row->usua_login,'usua_esadmin'=>$row->usua_esadmin,'auth'=>true);
-             $this->session->set_userdata($data);
-                redirect();      
-        }else{
-
+         $usua_esadmin = $this->input->get('usua_esadmin');       
+         $result=$this->db->query("SELECT *FROM usuario WHERE usua_login='{$usua_login}' AND usua_password ='{$usua_password}'");         
+         $result2=$this->db->query("SELECT *FROM usuario WHERE usua_esadmin='{$usua_esadmin}'");
+            if($result -> num_rows()>0){
+            $row = $result->row();
+            echo "bienvenido {$row->usua_login}";
+            $data=array('usua_id'=>$row->usua_id,  'usua_login'=>$row->usua_login,'usua_esadmin'=>$row->usua_esadmin,'auth'=>true);
+            $this->session->set_userdata($data);
+            redirect();      
+            }else{
             echo "incorrecto";
             redirect('Login');
-
-        }
+            }
     }
+
     public function formulario(){
         $this->load->view('header');
         $this->load->view('usuarios/formulario');

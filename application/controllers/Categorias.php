@@ -7,8 +7,8 @@ class Categorias extends CI_Controller {
         parent::__construct();
         
         if($this->session->userdata('auth')!=true){
-                redirect('Login');
-                dic("");
+        redirect('Login');
+        dic("");
         };
     }
 
@@ -22,14 +22,14 @@ class Categorias extends CI_Controller {
             $this->load->view('categorias/listacatuser',$data);
             $this->load->view('footer');
         }
-        else {
-            
+        else {            
             $this->load->view('header');
             $this->load->view('usuarios/menuadmin');
             $this->load->view('categorias/listacatadmin',$data);
             $this->load->view('footer');
         }
     }
+    
     public function insertar(){
         $this->load->view('header');
         $this->load->view('categorias/insertar');
