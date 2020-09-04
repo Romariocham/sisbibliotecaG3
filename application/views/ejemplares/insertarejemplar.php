@@ -1,4 +1,44 @@
-<?php  
+<h1>Insertar Ejemplar</h1>
+
+<?php
+echo form_open('ejemplar/guardar');
+?>
+ 
+  <div class="form-group">
+    <label>titulo</label>
+    <input type="text" class="form-control" name="ejem_titulo" placeholder="Ingrese el titulo" value="<?php echo set_value('ejem_titulo'); ?>"  >
+    <?php echo form_error('ejem_titulo'); ?>
+  </div>
+  <div class="form-group">
+    <label>editorial</label>
+    <input type="text" class="form-control" name="ejem_editorial" placeholder="Ingrese el editorial" value="<?php echo set_value('ejem_editorial'); ?>" >
+    <?php echo form_error('ejem_editorial'); ?>
+  </div>
+  <div class="form-group">
+    <label>año</label>
+    <input type="text" class="form-control" name="ejem_anio" placeholder="Ingrese el año" value="<?php echo set_value('ejem_anio'); ?>" >
+    <?php echo form_error('ejem_anio'); ?>
+  </div>
+  <div class="form-group">
+    <label>paginas</label>
+    <input type="text" class="form-control" name="ejem_paginas" placeholder="Ingrese la cantidad de paginas " value="<?php echo set_value('ejem_paginas'); ?>">
+    <?php echo form_error('ejem_paginas'); ?>
+  </div>
+
+  <?php
+  $data_e=array(
+  'class'=>'form-control',
+  'id'=>'b',
+  );
+  echo form_label('Categoria: ','b');
+  echo form_dropdown('ejem_cate_id',$opciones,'',$data_e);//array('class'=>'form-control', 'id'=>'exampleFormControlSelect1')
+  ?>
+  <br>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<?php /*
+echo validation_errors(); 
 echo form_open('ejemplar/guardar');
   
   $data_a = array(
@@ -63,4 +103,6 @@ echo form_open('ejemplar/guardar');
 
 
 echo '<br>';
+
+*/
 ?>
