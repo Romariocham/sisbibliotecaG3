@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-<!-- <body style="background-image: url(https://i.pinimg.com/originals/6c/c0/99/6cc099776c601f985b73b15a338d393e.jpg);"> -->
+
 <body>
-=======
+
 <body >
->>>>>>> ccf7c9aedbce92c444de29d2da23dbf720df8854
+
   <div id="login" style="padding: 50px " >
         <div class="container" >
             <div id="login-row" class="row justify-content-center align-items-center" >
