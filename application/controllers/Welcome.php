@@ -4,12 +4,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Welcome extends CI_Controller {
 
 	 function __construct(){
-		parent::__construct();
-		
+		parent::__construct();		
 		
 		if($this->session->userdata('auth')!=true){
-				redirect('Login');
-				dic("");
+		redirect('Login');
+		dic("");
 		};
 	}
 
@@ -32,11 +31,17 @@ class Welcome extends CI_Controller {
 	public function confidencial(){
 		if($this->session->userdata('auth')!=true) die("ascesso denegado");{
 			$idp=$this->session->userdata('usua_id');
-		    $data['usuario'] = $this->db->query("SELECT * FROM usuario WHERE usua_id='{$idp}'")->row();
+		    $data['usuario'] = $this->db->query("SELECT * FROM usuario WHERE usua_id='{$idp}' ")->row();
 			$this->load->view('header');
 		    $this->load->view('usuarios/menuadmin');
 			$this->load->view('confidencial',$data);
+
 		    $this->load->view('footer');
+
+
+
+
+
 	   }
 	}
 	public function confidencial2(){

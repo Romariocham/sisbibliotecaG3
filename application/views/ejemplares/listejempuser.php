@@ -5,7 +5,9 @@
         <th>titulo</th>
         <th>editorial</th>
         <th>año</th>
-        <th>paginas</th>
+        <th>pagina</th>
+        <th>categorias</th>
+       
     </tr>
    
    </thead>
@@ -17,6 +19,7 @@
         <td><?php echo $row->ejem_editorial; ?></td>
         <td><?php echo $row->ejem_anio; ?></td>
         <td><?php echo $row->ejem_paginas; ?></td>
+        <td><?php echo $row->cate_nombre; ?></td>
       </tr>
    <?php endforeach; ?>
    </tbody>
