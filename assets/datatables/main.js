@@ -3,7 +3,7 @@
 $('#example').DataTable(); //Para inicializar datatables de la manera más simple
 
 $(document).ready(function() {    
-   /* $('#example').DataTable({
+    $('#example').DataTable({
     //para cambiar el lenguaje a español
         "language": {
                 "lengthMenu": "Mostrar _MENU_ registros",
@@ -20,5 +20,5 @@ $(document).ready(function() {
 			     },
 			     "sProcessing":"Procesando...",
             }
-    });  */   
+    });     
 });

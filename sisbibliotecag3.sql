@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-07-2020 a las 02:12:56
--- Versión del servidor: 10.4.13-MariaDB
--- Versión de PHP: 7.4.7
+-- Tiempo de generación: 04-09-2020 a las 14:41:16
+-- Versión del servidor: 10.4.8-MariaDB
+-- Versión de PHP: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -52,7 +53,6 @@ CREATE TABLE `categoria` (
 INSERT INTO `categoria` (`cate_id`, `cate_nombre`) VALUES
 (1, 'historias'),
 (2, 'inteligencia artificial'),
-(7, 'base de datos'),
 (9, 'sistemas duros');
 
 -- --------------------------------------------------------
@@ -85,7 +85,11 @@ CREATE TABLE `ejemplar` (
 
 INSERT INTO `ejemplar` (`ejem_id`, `ejem_titulo`, `ejem_editorial`, `ejem_paginas`, `ejem_isbn`, `ejem_idioma`, `ejem_portada`, `ejem_digital`, `ejem_audio`, `ejem_resumen`, `ejem_tipo_id`, `ejem_cate_id`, `ejem_valoracion`, `ejem_anio`, `ejem_nprestamos`) VALUES
 (3, 'historia de la computadora', 'editorial Lumbreras', 302, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, 2002, NULL),
-(4, 'introduccion a la base de datos', 'editorial cusco', 206, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 7, NULL, 2001, NULL);
+(63, 'peru', 'peru', 777, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, 777, NULL),
+(95, 'df', 'wer', 12, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, 2000, NULL),
+(99, 'ffffffffff', 'qwe', 234, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, 234, NULL),
+(100, 'dddd', 'trea', 334, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, 3434, NULL),
+(101, 'ttt', 'trrer', 45, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 9, NULL, 345, NULL);
 
 -- --------------------------------------------------------
 
@@ -212,13 +216,15 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`usua_id`, `usua_login`, `usua_password`, `usua_codigo`, `usua_nombres`, `usua_apellidos`, `usua_direccion`, `usua_email`, `usua_telefono`, `usua_esadmin`) VALUES
-(1, 'alvaro', 'alvaro123', NULL, 'alvaro', 'catari ', 'Jron Arequipa', 'alvarocatari@gmail.com', '111111112', 1),
 (2, 'carlos', 'carlos123', NULL, 'carlos', 'ayala', 'Jron Lima', 'carlosayala@gmail.com', '987564321', 1),
 (3, 'romario', 'romario123', NULL, 'romario', 'chambi', 'Jron Ejercicio', 'romariochambi@gmail.com', '987654312', 1),
 (4, 'eliana', 'eliana123', NULL, 'eliana', 'mamani', 'Jron Los angeles', 'elianamamani@gmail.com', '978654321', 1),
 (12, 'naomi', 'naomi123', NULL, 'naomi', 'lopez ', 'Jron Puerto', 'naomilopez@gmail.com', '987652341', 0),
 (13, 'maria', 'maria123', NULL, 'maria', 'tamisa ', 'Jron Loreto', 'mariatamisa@gmail.com', '987652111', 0),
-(17, 'skot', 'skot123', NULL, 'skot', 'mamani', 'jron lampa', 'skotmamani@gmail.com', '999999999', 0);
+(17, 'skot', 'skot123', NULL, 'skot', 'mamani', 'jron lampa', 'skotmamani@gmail.com', '999999999', 0),
+(26, 'werwerw', '45678', NULL, 'werwerwer', 'wer', '234234', 'ggg@gmail.com', '234234', 0),
+(27, 'alvaro234', '123123', NULL, 'jose', 'ccati', 'jr. puno', 'jca@gmail.com', '344545', 0),
+(28, 'alvaro', 'alvaro123', NULL, 'alvaro', 'catari', '343434', 'alvaro@gmail.com', '342334', 1);
 
 --
 -- Índices para tablas volcadas
@@ -313,13 +319,13 @@ ALTER TABLE `autor`
 -- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de la tabla `ejemplar`
 --
 ALTER TABLE `ejemplar`
-  MODIFY `ejem_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ejem_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
 
 --
 -- AUTO_INCREMENT de la tabla `ejemplar_tipo`
@@ -349,7 +355,7 @@ ALTER TABLE `prestamo`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `usua_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `usua_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Restricciones para tablas volcadas
