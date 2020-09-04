@@ -2,7 +2,7 @@
   <div id="login" style="padding: 50px " >
         <div class="container" >
             <div id="login-row" class="row justify-content-center align-items-center" >
-                <div id="login-column" class="col-md-6" style=" border: #205574 2px ridge; padding-bottom : 35px; background-color:#E0EAF0; background-image: url(background-image: url(https://bibliotecadegalicia.xunta.gal/sites/default/files/styles/imaxe_principal_estandar_coleccions/public/images/catalogo/fp.jpg?itok=4U_djSw5));">
+                <div id="login-column" class="col-md-6" style=" border: #205574 2px ridge; padding-bottom : 35px; background-color:#E0EAF0;">
 
                     <div id="login-box" class="col-md-12">
                         <form  form action="<?php echo base_url('Login/evaluar')?>" method="post">

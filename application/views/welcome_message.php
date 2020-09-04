@@ -1,4 +1,4 @@
-<body style="background-image: url(https://i.pinimg.com/originals/6c/c0/99/6cc099776c601f985b73b15a338d393e.jpg);">
+<body >
   <div id="login" style="padding: 50px " >
         <div class="container" >
             <div id="login-row" class="row justify-content-center align-items-center" >
