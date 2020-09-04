@@ -72,6 +72,15 @@ $this->form_validation->set_rules($config);
                         $this->load->view('borrador_2_mensaje_exito');
                 }
         }
+<<<<<<< HEAD
+=======
+        
+        public function borrador_tabla(){
+            $this->load->view('header');
+            $this->load->view('web_borrador');
+            $this->load->view('footer');
+        }
+>>>>>>> 96400fc2a08e3d8d5c2704822a6319a302d6703d
 }
 
 ?>

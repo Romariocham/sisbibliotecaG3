@@ -33,7 +33,7 @@ class Welcome extends CI_Controller {
 			$idp=$this->session->userdata('usua_id');
 		    $data['usuario'] = $this->db->query("SELECT * FROM usuario WHERE usua_id='{$idp}' ")->row();
 			$this->load->view('header');
-		    $this->load->view('usuarios/menuadmin');
+		    $this->load->view('usuarios/menusuario');
 			$this->load->view('confidencial',$data);
 
 		    $this->load->view('footer');

@@ -40,6 +40,7 @@ class Model_categoria extends CI_Model {
         }
         return $opciones;
         }
+   
 }
 
 
