@@ -8,7 +8,11 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/all.min.css">
 </head>
 
+<<<<<<< HEAD
 	<!-- <body style="background-image: url(https://i.pinimg.com/originals/6c/c0/99/6cc099776c601f985b73b15a338d393e.jpg);"> -->
 	<body >
+=======
+	
+>>>>>>> ccf7c9aedbce92c444de29d2da23dbf720df8854
 
 	<div class = "container">
