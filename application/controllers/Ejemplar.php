@@ -30,8 +30,12 @@ class Ejemplar extends CI_Controller {
         }
     }
     public function insertar(){
+        $this->load->helper('form'); //cargando el helper_form
+        $this->load->model('model_categoria');
+        $opciones=$this->model_categoria->getCategorias();    
+        $data=array('opciones'=>$opciones);  //$pasando['filas']=$rows;
         $this->load->view('header');
-        $this->load->view('ejemplares/insertarejemplar');
+        $this->load->view('ejemplares/insertarejemplar',$data);
         $this->load->view('footer');
     }
 
