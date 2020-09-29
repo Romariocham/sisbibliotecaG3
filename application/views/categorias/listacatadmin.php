@@ -5,7 +5,7 @@
         <th>categorias</th>
         <th>ir</th>
         <th colspan='2'>opciones</th>
-     </tr>
+        </tr>
    
    </thead>
    <tbody>
@@ -23,4 +23,10 @@
    </tbody>
 </table>
 <br>
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
 <a href="<?php echo base_url('Categorias/insertar')?>">  <button type="submit" class="btn btn-primary">Insertar nueva categoria</button>  </a>
+
+<a class="nav-item nav-link" href="<?php echo base_url('Reportes') ?>"><button type="submit" class="btn btn-success">IMPRIMIR LISTA DE CATEGORIAS</button></a>
+  </nav>
+
+</nav>

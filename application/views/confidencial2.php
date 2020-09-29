@@ -39,7 +39,12 @@
 
 </table>
    <br>
+   <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
    <a href="<?php echo base_url('Login/insertar')?>"> <button type="submit" class="btn btn-success">INSERTAR NUEVO USUARIO</button> </a>
+   <!--para imprimir a los usuarios -->
+    <a class="nav-item nav-link" href="<?php echo base_url('Reportes/imprimeusuarios') ?>"><button type="submit" class="btn btn-success">IMPRIMIR LISTA DE USUARIOS</button></a>
+  </nav>
+
     <script src="<?php echo base_url()?>assets/datatables/jquery/jquery-3.3.1.min.js"></script>
  <script type="text/javascript" src="<?php echo base_url()?>assets/datatables/datatables.min.js"></script>            
  <script type="text/javascript" src="<?php echo base_url()?>assets/datatables/main.js"></script>
