@@ -1,137 +1,88 @@
-<head> 
-<!--Para poder usar los iconos de valide e invalited agregagos esta linea que nos permite usar bootstrap 3,
-y los iconos de esta vercion-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
-</head>
-
 <h1>Registrate - Ingrese los datos</h1>
 <button class = "btn btn danger"><i class="fa fa-user-plus" aria-hidden="true"></i></button>
 
-<form method="post" id="validateForm" action="<?php echo base_url('Login/guardar') ?>" >
-<fieldset>
+<form class="needs-validation" novalidate  method="post"action="<?php echo base_url('Login/guardar') ?>" >
+
   <div class="form-group">
-    <label>nombre de usuario</label>
-    <input type="text" class="form-control" name="usua_login" placeholder="Ingrese los nombres">
+	<label for="usua_loging">Nombre de usuario</label>
+      <input type="text" class="form-control" name="usua_loging" 
+     placeholder="Nombre de Usuario" maxlength="15" value="" required>
+     <div class="valid-feedback">Looks good!</div>
+     <div class="invalid-feedback">Looks bad!</div>
   </div>
   <div class="form-group">
-    <label>nombres</label>
-    <input type="text" class="form-control" name="usua_nombres"  placeholder="Ingrese sus nombres">
+    <label for= "usua:nombres">Nombres</label>
+    <input type="text" class="form-control" name="usua_nombres"  placeholder="Ingrese sus nombres" required>
+	<div class="valid-feedback">Looks good!</div>
+     <div class="invalid-feedback">Looks bad!</div>
   </div>
   <div class="form-group">
     <label>apellidos</label>
-    <input type="text" class="form-control" name="usua_apellidos"  placeholder="Ingrese sus apellidos">
+    <input type="text" class="form-control" name="usua_apellidos"  placeholder="Ingrese sus apellidos"required >
+	<div class="valid-feedback">Looks good!</div>
+     <div class="invalid-feedback">Looks bad!</div>
   </div>
   <div class="form-group">
     <label>direccion</label>
-    <input type="text" class="form-control" name="usua_direccion"  placeholder="Ingrese su direccion">
+    <input type="text" class="form-control" name="usua_direccion"  placeholder="Ingrese su direccion" required>
+	<div class="valid-feedback">Looks good!</div>
+     <div class="invalid-feedback">Looks bad!</div>
   </div>
   <div class="form-group">
     <label>email</label>
-    <input type="text" class="form-control" name="usua_email"  placeholder="Ingrese su email">
+    <input type="email" class="form-control" name="usua_email"  placeholder="Ingrese su email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+	<div class="valid-feedback">Looks good!</div>
+     <div class="invalid-feedback">Looks bad!</div>
   </div>
   <div class="form-group">
     <label>telefono</label>
-    <input type="text" class="form-control" name="usua_telefono"  placeholder="Ingrese su telefono">
+    <input type="tel" class="form-control" name="usua_telefono"  placeholder="Ingrese su telefono" max= "9"required>
+	<div class="valid-feedback">Looks good!</div>
+     <div class="invalid-feedback">Looks bad!</div>
   </div>
   <div class="form-group">
     <label>password</label>
-    <input type="password" class="form-control" name="usua_password" placeholder="Ingrese la contraseña">
+    <input type="password" class="form-control" name="usua_password" placeholder="Ingrese la contraseña" min="3" required>
+	<div class="valid-feedback">Looks good!</div>
+     <div class="invalid-feedback">Looks bad!</div>
   </div>
   <div class="form-group">
     <label>Confirma tu password</label>
-    <input type="password" class="form-control" name="usua_confirmPassword" placeholder="Ingrese la contraseña">
+    <input type="password" class="form-control"  name="usua_confirmPassword" placeholder="Confirme la contraseña"  min="3" required>
+	<div class="valid-feedback">Looks good!</div>
+     <div class="invalid-feedback">Looks bad!</div>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
-</fieldset>
 </form>
-
 <script>
-//Utilizamos js de bootsprap para poder comprobar y mostrar los requisitos del llenado del formulario.
-      $('#validateForm').bootstrapValidator({
-//para poder mostrar los iconos 
-feedbackIcons: {
-	valid:'glyphicon glyphicon-ok',
-	invalid: 'glyphicon glyphicon-remove',
-	validating: 'glyphicon glyphicon-refresh'
-},
-fields: {
-	usua_nombres: {
-		validators: {
-			notEmpty: {
-				message: 'Por favor escribe tu Nombre'
-			}
-		}
-	},
-  usua_apellidos: {
-		validators: {
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // fetch all the forms we want to apply custom style
+    var inputs = document.getElementsByClassName('form-control')
 
-			notEmpty: {
-				message: 'Por forvor escribe tu apellido'
-			}
-		}
-	},
-	usua_telefono: {
-		validators: {
-			numeric: { 
-				message: 'Escribir correctamente tu numero de telefono'
-      },
-			notEmpty: {
-				message: 'Por favor escribe tu numero de telefono'
-			}
-		}
-	},
-	usua_direccion: {
-		validators: {
-			stringLength: {
-				max: 100,
-				message:'Maximo 100 caracteres'
-			},
-			notEmpty: {
-				message: 'Por favor escribe tu direccion'
-			}
-		}
-	},
-	usua_email: {
-		validators: {
-			notEmpty: {
-				message: 'Por favor escribe tu email'
-			},
-			emailAddress: {
-				message: 'Escribe un email valido'
-			}
-		}
-	},
-	usua_password: {
-		validators: {
-      stringLength: {
-				min: 5,
-				message: 'Su contraseña no es segura'
-			},
-			notEmpty: {
-				message: 'Por favor escribe tu contraseña'
-			}
-		}
-	},
-	usua_confirmPassword: {
-		validators: {
-			notEmpty: {
-				message: 'Vueleve a escribir tu contraseña'
-			},
-			identical: {
-				field: 'usua_password',
-				message: 'La contraseña no coincide con lo escrito anteriormente'
-			}
-		}
-	 },
-	}
-});
-    </script>
+    // loop over each input and watch blue event
+    var validation = Array.prototype.filter.call(inputs, function(input) {
+        
+      input.addEventListener('blur', function(event) {
+        // reset
+        input.classList.remove('is-invalid')
+        input.classList.remove('is-valid')
+        
+        if (input.checkValidity() === false) {
+            input.classList.add('is-invalid')
+        }
+        else {
+            input.classList.add('is-valid')
+        }
+      }, false);
+    });
+  }, false);
+})()
 
+</script>
 <script>
-// //Usamos este codigo de bootstrap para no poder enviar el formulario sin llenar algunos campos
+//Usamos este codigo de bootstrap para no poder enviar el formulario sin llenar algunos campos
 (function() {
   'use strict';
   window.addEventListener('load', function() {

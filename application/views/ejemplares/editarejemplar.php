@@ -1,5 +1,5 @@
 <h1>Editando Ejemplares </h1>
-<button class ="btn btn-danger"><i class="fa fa-list" aria-hidden="true"></i></button>	
+<button class ="btn btn-warning"><i class="fa fa-list" aria-hidden="true"></i></button>	
 
 <form method="post" action="<?=base_url('Ejemplar/editarRegistro/')?><?=$ejem_id?>">
   
@@ -20,6 +20,6 @@
 	<input type="text" class="form-control" size="40" name="ejem_paginas" id="ejem_paginas" value="<?=$ejem_paginas?>">
   </div>
   
-  <button type="submit" class="btn btn-danger">Editar</button>
+  <button type="submit" class="btn btn-warning">Editar</button>
 
 </form>

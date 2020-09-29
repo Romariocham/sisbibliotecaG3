@@ -14,9 +14,9 @@
             <tr>
               <td><?php echo $row->cate_id; ?></td>
               <td><?php echo $row->cate_nombre; ?></td>
-              <td ><a href="<?php  echo base_url();?>Ejemplar/listaejemplar?">ir</a></td>
-              <td ><a href="<?php  echo base_url();?>Categorias/editar?cate_id=<?php echo $row->cate_id;?>" >Editar</a></td>
-              <td ><a href="<?php  echo base_url();?>Categorias/eliminar?cate_id=<?php echo $row->cate_id;?>" >Eliminar</a></td> 
+              <td ><a href="<?php  echo base_url();?>Ejemplar/listaejemplar?"> <button type="submit" class="btn btn-secondary">Ir</button></a></td>
+              <td ><a href="<?php  echo base_url();?>Categorias/editar?cate_id=<?php echo $row->cate_id;?>" > <button type="submit" class="btn btn-warning">Editar</button></a>
+              <a href="<?php  echo base_url();?>Categorias/eliminar?cate_id=<?php echo $row->cate_id;?>" ><button type="submit" class="btn btn-danger">Eliminar</button></a></a></td> 
             </tr>
          <?php endforeach; ?>
 

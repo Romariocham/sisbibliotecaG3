@@ -1,7 +1,6 @@
-
-    <ul class="nav nav-tabs" role="tablist">
-       <li class="nav-item" data-toggle="tab"><a class="nav-link" href="<?php echo base_url() ?>"><h3>inicio</h3></a></li>
-       <li class="nav-item" data-toggle="tab"><a class="nav-link" href="<?php echo base_url('Categorias') ?>"><h3>Categorias</h3></a></li>
-       <li class="nav-item" data-toggle="tab"><a class="nav-link" href="<?php echo base_url('Welcome/confidencial') ?>"><h3>Info</h3></a></li>     
-       <li class="nav-item" data-toggle="tab"><a class="nav-link" href="<?php echo base_url('Login/salir') ?>"><h3>salir</h3></a></li>
-    </ul>
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+      <a class="nav-item nav-link" href="<?php echo base_url() ?>"><h3>INICIO</h3></a>
+      <a class="nav-item nav-link" href="<?php echo base_url('Categorias') ?>"><h3>CATEGORIAS</h3></a>
+      <a class="nav-item nav-link" href="<?php echo base_url('Welcome/confidencial') ?>"><h3>INFORMACION</h3></a>     
+      <a class="nav-item nav-link" href="<?php echo base_url('Login/salir') ?>"><h3>SALIR</h3></a>
+</nav>

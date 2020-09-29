@@ -24,8 +24,8 @@
         <td><?php echo $row->ejem_anio; ?></td>
         <td><?php echo $row->ejem_paginas; ?></td>
         <td><?php echo $row->cate_nombre; ?></td>
-        <td ><a href="<?php  echo base_url();?>Ejemplar/editar?ejem_id=<?php echo $row->ejem_id;?>" > Editar</a> </td>
-        <td ><a href="<?php  echo base_url();?>Ejemplar/eliminar?ejem_id=<?php echo $row->ejem_id;?>" >Eliminar</a> </td> 
+        <td ><a href="<?php  echo base_url();?>Ejemplar/editar?ejem_id=<?php echo $row->ejem_id;?>" > <button type="submit" class="btn btn-warning">Editar</button></a> </td>
+        <td ><a href="<?php  echo base_url();?>Ejemplar/eliminar?ejem_id=<?php echo $row->ejem_id;?>" > <button type="submit" class="btn btn-danger">Eliminar</button></a> </td> 
     </tr>
 
     <?php endforeach; ?>
@@ -38,7 +38,7 @@
 
 
 
- <a href="<?php echo base_url('Ejemplar/insertar')?>"> <button type="submit" class="btn btn-primary">Insertar nuevo ejemplar</button> </a>
+ <a href="<?php echo base_url('Ejemplar/insertar')?>"> <button type="submit" class="btn btn-success">Insertar nuevo ejemplar</button> </a>
 
   <script src="<?php echo base_url()?>assets/datatables/jquery/jquery-3.3.1.min.js"></script>
  <script type="text/javascript" src="<?php echo base_url()?>assets/datatables/datatables.min.js"></script>            

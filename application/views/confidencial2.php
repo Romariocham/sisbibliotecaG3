@@ -28,16 +28,18 @@
         <td><?php echo $row->usua_email;?></td>
         <td><?php echo $row->usua_telefono;?></td>
         <td ><a href="<?php  echo base_url();?>Login/editar?usua_id=<?php echo $row->usua_id;?>" >
-        Editar</a>
+       <button class="btn btn-warning" >Editar</button>
+      </a>
         </td>
-        <td ><a href="<?php  echo base_url();?>Login/eliminar?usua_id=<?php echo $row->usua_id;?>" >Eliminar</a></td> 
+        <td ><a href="<?php  echo base_url();?>Login/eliminar?usua_id=<?php echo $row->usua_id;?>" >
+        <button class="btn btn-danger">Eliminar</button> </a></td> 
       </tr>
    <?php endforeach; ?>
    </tbody>
 
 </table>
    <br>
-   <a href="<?php echo base_url('Login/insertar')?>"> <button type="submit" class="btn btn-primary">Insertar nuevo usuario </button> </a>
+   <a href="<?php echo base_url('Login/insertar')?>"> <button type="submit" class="btn btn-success">INSERTAR NUEVO USUARIO</button> </a>
     <script src="<?php echo base_url()?>assets/datatables/jquery/jquery-3.3.1.min.js"></script>
  <script type="text/javascript" src="<?php echo base_url()?>assets/datatables/datatables.min.js"></script>            
  <script type="text/javascript" src="<?php echo base_url()?>assets/datatables/main.js"></script>
