@@ -3,18 +3,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Borrador extends CI_Controller {
 
-        public function index()
-        {
-                $this->load->helper(array('form', 'url')); //esta cargando el form hepler y el url helper
-                $this->load->library('form_validation');
-                
-
-
+        public function index(){
+        $this->load->helper(array('form', 'url')); //esta cargando el form hepler y el url helper
+        $this->load->library('form_validation');  
 
         $config  = array(
-         
-           
-              
+                     
                array(
                         'field' => 'username',
                         'label' => 'usuario',
@@ -49,35 +43,27 @@ class Borrador extends CI_Controller {
                         'required' => 'debes proporcionar un %s.',
                         'valid_email' => 'debes proporcionar un %s valido.',
                         'is_unique' => 'El {field} ya existe..'),
-                )
-        
-        
-
-       
-
-      
-                             
+                )                             
                                 );
 
                 
-$this->form_validation->set_rules($config);
-
-
-                if ($this->form_validation->run('abc') == FALSE)
-                {/*el metodo run() solo devuelve verdadero cuando se aplica con exito todas las reglas, en este caso las reglas no han sido aplicadas con exito*/
-                        $this->load->view('borrador');
-                }
-                else
-                {
-                        $this->load->view('borrador_2_mensaje_exito');
-                }
+        $this->form_validation->set_rules($config);
+            if ($this->form_validation->run('abc') == FALSE){/*el metodo run() solo devuelve verdadero cuando se aplica con exito todas las reglas, en este caso las reglas no han sido aplicadas con exito*/
+            $this->load->view('borrador');
+            }else{
+            $this->load->view('borrador_2_mensaje_exito');
+            }
         }
 
         
-        public function datatable(){
-      
-            $this->load->view('vtborrar');
-  
+        public function datatable(){      
+        $this->load->view('Borrador/vtborrar');  
+        }
+
+        public function datatable02(){
+        //$this->load->view('header');
+        $this->load->view('Borrador/vtborrar02');
+        //$this->load->view('footer');    
         }
 
 }
