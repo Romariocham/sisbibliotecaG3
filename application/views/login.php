@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
 <style>
   body{
@@ -14,12 +13,13 @@
                 <div id="login-column" class="rounded-sm" style="border: #C6DADB 5px ridge">
                     <div id="login-box" class="card"  style=" background-color:#CAD6D7; opacity: 0.8;" >
                         <form class="needs-validation mr-2" novalidate  form action="<?php echo base_url('Login/evaluar')?>" method="post">
-                             <div class="card-title">
-                             <b><h1 class="text-center text-info">Login</h1></b>
+                             <div class="card-title text-center">
+                             <img src="https://image.flaticon.com/icons/png/512/272/272456.png" alt="log" style="heigth:30%; width:30%; ">
+                             <b><h1>LOGIN</h1></b> 
                              </div>
                              <div class="card-body">
                             <div class="form-group">
-                                <label for="username" class="text-info"><i class="fas fa-user"></i><h3>Usuario:</h3></label><br>
+                                <label for="username" class="text-info"><h3>Usuario:</h3></label><br>
                                 <input type="text" name="usua_login" class="form-control"  placeholder="Ingrese los nombres" required> 
                                 <div class="valid-feedback"></div>
                                 <div class="invalid-feedback">Escriba su nombre</div>
@@ -31,13 +31,14 @@
                                 <div class="invalid-feedback">Escriba su contraseña</div>
                             </div>
                             <button type="submit" class="btn btn-primary btn-lg btn-block">Ingresar</button>
-                  
+                            </div>
                         </form>
-                         <br> 
+                       <div class="card-footer">
                         <a href="<?php echo base_url('Login/formulario')?>" style ="position: right ">
-                            <button type="submit" class="btn btn-secondary btn-lg btn-block" >Registrarse</button>
+                            <button class="btn btn-secondary btn-lg btn-block" >Registrarse</button>
                         </a>
-                        <div>
+                        </div>
+                       </div>
                     </div>
                     </div>
                 </div>

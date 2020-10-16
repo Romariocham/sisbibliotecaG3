@@ -10,7 +10,7 @@
 </div>
 <img src="https://www.educaciontrespuntocero.com/wp-content/uploads/2019/04/biblioteca-696x465.jpg" style="width:100%" alt="Libro">
 </div>
-<div class="form-group-col-md-6" style="background-color:#CAD6D7; padding:14px; margin:0px;">
+<div class="form-group-col-md-6 rounded" style="background-color:#CAD6D7; padding:14px; margin:0px;">
 <h1>Registrate - Ingrese los datos</h1>
 <button class = "btn btn danger"><i class="fa fa-user-plus" aria-hidden="true"></i></button>
 

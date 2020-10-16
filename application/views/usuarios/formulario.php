@@ -2,10 +2,11 @@
 <div class="form-row">
 <div class="form-group col-md-6">
   <h3>Biblioteca: </h3> 
-  <div>BLALALALALALALALABLABLABAL:</div>
+  <div>Nunca cierra!
+  </div>
   <img src="https://img.freepik.com/vector-gratis/tecnologia-smartphone-educacion-libros-documentos_24640-37609.jpg?size=626&ext=jpg" alt="imga" style="width:100%">
 </div>
-<div class="form-group col-md-6" style="background-color:#CAD6D7">
+<div class="form-group col-md-6 rounded" style="background-color:#CAD6D7">
 <h1>Registrate - Ingrese los datos</h1>
 <form class="needs-validation" novalidate  method="post"action="<?php echo base_url('Login/guardar') ?>" >
   <div class="form-group " >

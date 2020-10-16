@@ -3,10 +3,12 @@
 <div class="form-row">
 <div class="form-group col-md-6">
   <h3>Biblioteca: </h3> 
-  <div>BLALALALALALALALABLABLABAL:</div>
   <img src="https://img.freepik.com/foto-gratis/libro-abierto-antecedentes-biblicos_112554-164.jpg?size=626&ext=jpg" alt="libro magico" style="height:90%; width:100%;">
+  <br><div>
+  <h4>LA BLIBLIOTECA NO CIERRA!</h4>
+  </div>
 </div>
-<div class="from-group col-md-6" style="background-color:#CAD6D7; padding:10px;">
+<div class="from-group col-md-6 rounded" style="background-color:#CAD6D7; padding:10px;">
 <h1>Insertar Ejemplar</h1>
 
 <?php echo form_open('ejemplar/guardar');?>

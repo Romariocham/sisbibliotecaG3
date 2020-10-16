@@ -11,6 +11,7 @@
       <tr>
         <td><?php echo $row->cate_id; ?></td>
         <td><?php echo $row->cate_nombre; ?></td>
+        </tr>
    <?php endforeach; ?>
    </tbody>
 </table>

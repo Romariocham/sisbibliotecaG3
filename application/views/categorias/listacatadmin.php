@@ -1,7 +1,10 @@
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
-<div class="container">
-<table class="table table-striped" style="">
+<div class="form-group">
+<table class="table table-striped">
+<table class="table table-striped table-bordered" style="width:100%">
+
    <thead>
      <tr>
         <th>Id</th>
@@ -24,7 +27,7 @@
    </tbody>
 
 </table>
-</div>
+
 <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
 <a href="<?php  echo base_url();?>Ejemplar/listaejemplar?"><button type="submit" class="btn btn-secondary">VER EJEMPLARES<i class="fas fa-arrow-circle-right"></i></button></a>
 <a href="<?php echo base_url('Categorias/insertar')?>">  <button type="submit" class="btn btn-primary">Insertar nueva categoria</button>  </a>

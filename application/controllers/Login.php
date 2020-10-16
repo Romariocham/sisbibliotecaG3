@@ -35,7 +35,6 @@ class Login extends CI_Controller {
      public function insertar()
     {   
         $this->load->view('header');
-        $this->load->view('usuarios/menuadmin');
         $this->load->view('usuarios/insertarusuario');
         $this->load->view('footer');
     }
