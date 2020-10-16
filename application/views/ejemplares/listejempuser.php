@@ -25,4 +25,8 @@
    </tbody>
 </table>
 <br>
+<nav class="navbar navbar-light" style="background-color: #FFFFFF;">
+  <!-- imprime lista de ejemplares-->
+<a class="nav-item nav-link" href="<?php echo base_url('Reportes') ?>"><button type="submit" class="btn btn-success">IMPRIMIR LISTA DE EJEMPLARES</button></a>
+</nav>
 

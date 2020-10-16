@@ -43,9 +43,13 @@
   ------------------------------------------------------------------------------------------->
 
 <!-----------------------------------------------------------------------------------------------------------------------
-                    Menu: insertar nuevo usuario,  imprimir usuarios en pdf "falta aumentar" e (inicio) -->  
+                    Menu: insertar nuevo usuario,  imprimir usuarios en pdf (inicio) -->  
 <br>
+<nav class="navbar navbar-light" style="background-color: #FFFFFF;">
 <a href="<?php echo base_url('Ejemplar/insertar')?>"> <button type="submit" class="btn btn-success">Insertar nuevo ejemplar</button> </a>
+
+<a class="nav-item nav-link" href="<?php echo base_url('Reportes') ?>"><button type="submit" class="btn btn-success">IMPRIMIR LISTA DE EJEMPLARES</button></a>
+</nav>
 
                      <!--Menu: insertar nuevo usuario,  imprimir usuarios en pdf "falta aumentar" e (final)
 -------------------------------------------------------------------------------------------------------------------------->   

@@ -36,8 +36,7 @@ class Categorias extends CI_Controller {
         $this->load->view('footer');
     }
 
-    public function listacategoria()
-    {   
+    public function listacategoria(){   
         $data['categoria'] = $this->db->query("SELECT * FROM categoria")->result();
 
             $this->load->view('header');
