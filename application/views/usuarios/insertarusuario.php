@@ -1,4 +1,16 @@
+<div class="form-row" style="position:relative" >
+<div class="form-group col-md-6">
+<div>
+   <h1>Biblioteca:</h1>
+</div>
+<div >
+  <p> Esta es una plataforma dondete puedes ver una gran variedad de libros:</p>
 
+  <h3>Registrate es gratis!</h3>
+</div>
+<img src="https://www.educaciontrespuntocero.com/wp-content/uploads/2019/04/biblioteca-696x465.jpg" style="width:100%" alt="Libro">
+</div>
+<div class="form-group-col-md-6 rounded" style="background-color:#CAD6D7; padding:14px; margin:0px;">
 <h1>Registrate - Ingrese los datos</h1>
 <button class = "btn btn danger"><i class="fa fa-user-plus" aria-hidden="true"></i></button>
 
@@ -11,38 +23,40 @@
      <div class="valid-feedback">Looks good!</div>
      <div class="invalid-feedback">Looks bad!</div>
   </div>
-  <div class="form-group">
+  <div class="form-row">
+  <div class="form-group col-md-6">
     <label for= "usua:nombres">Nombres</label>
     <input type="text" class="form-control" name="usua_nombres"  placeholder="Ingrese sus nombres" required>
 	<div class="valid-feedback">Looks good!</div>
      <div class="invalid-feedback">Looks bad!</div>
   </div>
-  <div class="form-group">
-    <label>apellidos</label>
+  <div class="form-group col-md-6">
+    <label>Apellidos</label>
     <input type="text" class="form-control" name="usua_apellidos"  placeholder="Ingrese sus apellidos"required >
 	<div class="valid-feedback">Looks good!</div>
      <div class="invalid-feedback">Looks bad!</div>
   </div>
+  </div>
   <div class="form-group">
-    <label>direccion</label>
+    <label>Direccion</label>
     <input type="text" class="form-control" name="usua_direccion"  placeholder="Ingrese su direccion" required>
 	<div class="valid-feedback">Looks good!</div>
      <div class="invalid-feedback">Looks bad!</div>
   </div>
   <div class="form-group">
-    <label>email</label>
+    <label>Email</label>
     <input type="email" class="form-control" name="usua_email"  placeholder="Ingrese su email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
 	<div class="valid-feedback">Looks good!</div>
      <div class="invalid-feedback">Looks bad!</div>
   </div>
   <div class="form-group">
-    <label>telefono</label>
+    <label>Telefono</label>
     <input type="tel" class="form-control" name="usua_telefono"  placeholder="Ingrese su telefono" max= "9"required>
 	<div class="valid-feedback">Looks good!</div>
      <div class="invalid-feedback">Looks bad!</div>
   </div>
   <div class="form-group">
-    <label>password</label>
+    <label>Password</label>
     <input type="password" class="form-control" name="usua_password" placeholder="Ingrese la contraseña" min="3" required>
 	<div class="valid-feedback">Looks good!</div>
      <div class="invalid-feedback">Looks bad!</div>
@@ -55,6 +69,9 @@
   </div>
   <button type="submit" class="btn btn-primary btn-lg btn-block">GUARDAR</button>
 </form>
+</div>
+
+</div>
 <script>
 (function() {
   'use strict';

@@ -32,6 +32,7 @@ class Categorias extends CI_Controller {
     
     public function insertar(){
         $this->load->view('header');
+        $this->load->view('usuarios/menuadmin');
         $this->load->view('categorias/insertar');
         $this->load->view('footer');
     }

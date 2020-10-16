@@ -37,6 +37,7 @@ class Ejemplar extends CI_Controller {
         $opciones=$this->model_categoria->getCategorias();    
         $data=array('opciones'=>$opciones);  //$pasando['filas']=$rows;
         $this->load->view('header');
+        $this->load->view('usuarios/menuadmin');
         $this->load->view('ejemplares/insertarejemplar',$data);
         $this->load->view('footer');
     }
@@ -47,12 +48,14 @@ class Ejemplar extends CI_Controller {
         $ejem_anio =$this->input->post('ejem_anio');
         $ejem_pagina =$this->input->post('ejem_paginas');
         $ejem_cate_id =$this->input->post('ejem_cate_id');
+        $ejem_img=$this->input->post('ejem_img');
         $data=array(
                    'ejem_titulo'=>$ejem_titulo,
                    'ejem_editorial'=>$ejem_editorial,
                    'ejem_anio'=>$ejem_anio,
                    'ejem_paginas'=>$ejem_pagina,
                    'ejem_cate_id'=>$ejem_cate_id,
+                   'ejem-img'=>$ejem_img,
                );
         /*00x-------------------------form validation inicio---------------------------*/
         $this->load->helper(array('form', 'url')); //esta cargando el form hepler y el url helper
@@ -97,7 +100,10 @@ class Ejemplar extends CI_Controller {
                                'min_length'     => 'las {field} debe tener almenos {param} digitos.',//'el %s debe tener almenos 5 digitos.'
                                'max_length'     => 'las {field} debe tener menos de {param} digitos.'),
                 ),
-               
+                array(
+                    'field' => 'ejem_img',
+                    'label' => 'portada',
+                ),
                                     
                             );
         $this->form_validation->set_rules($config);
@@ -109,6 +115,7 @@ class Ejemplar extends CI_Controller {
 
                     $data=array('opciones'=>$opciones);  //$pasando['filas']=$rows;
                     $this->load->view('header');
+                    $this->load->view('usuarios/menuadmin');
                     $this->load->view('ejemplares/insertarejemplar',$data);
                     $this->load->view('footer');
                          
@@ -148,6 +155,7 @@ class Ejemplar extends CI_Controller {
         $result=  $this->model_ejemplar->consultar(); 
         $datos=array('ejemplar'=>$result); 
     {   $this->load->view('header');
+        $this->load->view('usuarios/menuadmin');
         $this->load->view('ejemplares/editarejemplar', $datos);
         $this->load->view('footer');
     }
@@ -165,6 +173,7 @@ class Ejemplar extends CI_Controller {
     */
     public function eliminar(){
             $this->load->view('header');
+            $this->load->view('usuarios/menuadmin');
             $this->load->model('model_ejemplar');
             $id =$this->input->get('ejem_id');
             $this->model_ejemplar->eliminar($id);
@@ -195,12 +204,14 @@ class Ejemplar extends CI_Controller {
             return FALSE;
         }
         $this->load->view('header');
+        $this->load->view('usuarios/menuadmin');
         $this->load->view('ejemplares/editarejemplar',$data);
         $this->load->view('footer');
 
     }
      public function editarRegistro(){
             $this->load->view('header');
+            $this->load->view('usuarios/menuadmin');
             $this->load->model('model_ejemplar');
 
             $id=$this->uri->segment(3);

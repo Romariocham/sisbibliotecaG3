@@ -9,4 +9,5 @@
         <p><b>Email:</b>        <?php echo $usuario->usua_email;?></p>
         <p><b>Telefono:</b>    <?php echo $usuario->usua_telefono;?></p>
 </div>
+
 </div>

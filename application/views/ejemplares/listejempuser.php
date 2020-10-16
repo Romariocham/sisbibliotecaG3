@@ -1,12 +1,13 @@
 <table class="table table-striped">
    <thead>
     <tr>
-        <th>id</th>
-        <th>titulo</th>
-        <th>editorial</th>
-        <th>año</th>
-        <th>pagina</th>
-        <th>categorias</th>
+        <th>Id</th>
+        <th>Titulo</th>
+        <th>Portada</th>
+        <th>Editorial</th>
+        <th>Año</th>
+        <th>Pagina</th>
+        <th>Categorias</th>
        
     </tr>
    
@@ -16,6 +17,7 @@
       <tr>
         <td><?php echo $row->ejem_id; ?></td>
         <td><?php echo $row->ejem_titulo; ?></td>
+        <td><img src="<?php echo $row->ejem_img; ?>"> </td>
         <td><?php echo $row->ejem_editorial; ?></td>
         <td><?php echo $row->ejem_anio; ?></td>
         <td><?php echo $row->ejem_paginas; ?></td>

@@ -3,7 +3,6 @@
      <tr>
         <th>Id</th>
         <th>Categorias</th>
-        <th>Ingresar</th>
      </tr>
    
    </thead>
@@ -12,14 +11,12 @@
       <tr>
         <td><?php echo $row->cate_id; ?></td>
         <td><?php echo $row->cate_nombre; ?></td>
-
-      
-
-        <td ><a href="<?php  echo base_url();?>Ejemplar/listaejemplar1?cate_id=<?php echo $row->cate_id;?>" > 
-        <button type="button" class="btn btn-secondary">Ir</button></a></td>
+        </tr>
    <?php endforeach; ?>
    </tbody>
 </table>
+<a href="<?php  echo base_url();?>Ejemplar/listaejemplar1?"><button type="submit" class="btn btn-secondary">VER EJEMPLARES<i class="fas fa-arrow-circle-right"></i></button></a>
+
 <br>
 
 
