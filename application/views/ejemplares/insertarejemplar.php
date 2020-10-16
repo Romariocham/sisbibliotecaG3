@@ -18,11 +18,18 @@
     <input type="text" class="form-control" name="ejem_titulo" placeholder="Ingrese el titulo" value="<?php echo set_value('ejem_titulo'); ?>"  >
     <?php echo form_error('ejem_titulo'); ?>
   </div>
-  <div class="form-group">
+  <div class="form-row">
+  <div class="form-group col-md-6">
     <label>Editorial</label>
     <input type="text" class="form-control" name="ejem_editorial" placeholder="Ingrese el editorial" value="<?php echo set_value('ejem_editorial'); ?>" >
     <?php echo form_error('ejem_editorial'); ?>
   </div>
+  <div class="form-group col-md-6">
+    <label>PORTADA</label>
+    <input type="img" class="form-control" name="ejem_img" placeholder="Ingrese la portada" value="<?php echo set_value('ejem_img'); ?>" >
+    <?php echo form_error('ejem_img'); ?>
+  </div>
+</div>
   <div class="form-row">
   <div class="form-group col-md-6">
     <label>Año</label>
@@ -35,6 +42,7 @@
     <?php echo form_error('ejem_paginas'); ?>
   </div>
 </div>
+<div>
   <?php
   $data_e=array(
   'class'=>'form-control',
@@ -43,6 +51,7 @@
   echo form_label('Categoria: ','b');
   echo form_dropdown('ejem_cate_id',$opciones,'',$data_e);//array('class'=>'form-control', 'id'=>'exampleFormControlSelect1')
   ?>
+  </div>
   <br>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

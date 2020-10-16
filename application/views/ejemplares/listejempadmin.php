@@ -11,7 +11,7 @@
         <th>Año</th>
         <th>Pagina</th>
         <th>Categorias</th>
-        <!--<th>Portada</th>-->
+        <th>Portada</th>
         <th>Opciones</th>   <!--  <th colspan='2'>opciones</th>-->
      </tr>     
    </thead>
@@ -25,7 +25,7 @@
         <td><?php echo $row->ejem_anio; ?></td>
         <td><?php echo $row->ejem_paginas; ?></td>
         <td><?php echo $row->cate_nombre; ?></td>
-        <!--<td><?php //echo $row->ejem_imagen; ?></td>-->
+        <td><img src="<?php echo $row->ejem_img; ?>"></td>-->
         <td ><a href="<?php  echo base_url();?>Ejemplar/editar?ejem_id=<?php echo $row->ejem_id;?>" > <button type="submit" class="btn btn-warning"><i class="fas fa-edit"></i></button></a><a href="<?php  echo base_url();?>Ejemplar/eliminar?ejem_id=<?php echo $row->ejem_id;?>" > <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button></a> </td> 
         </tr> 
     <?php endforeach; ?>
