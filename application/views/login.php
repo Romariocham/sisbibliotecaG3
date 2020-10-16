@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
 <style>
   body{
     background-image: url("https://i.blogs.es/6028d4/5416627232_c292475f50_k/1366_2000.jpg");
@@ -9,13 +11,15 @@
         <div class="container" >
             <div id="login-row" class="row justify-content-center align-items-center" >
                 <div class="col-md-6">
-                <div id="login-column" class="rounded-sm bg-light"  style="border: #C6DADB 5px ridge; padding-bottom : 35px;">
-            
-                    <div id="login-box" class="col-md-12">
+                <div id="login-column" class="rounded-sm" style="border: #C6DADB 5px ridge">
+                    <div id="login-box" class="card"  style=" background-color:#CAD6D7; opacity: 0.8;" >
                         <form class="needs-validation mr-2" novalidate  form action="<?php echo base_url('Login/evaluar')?>" method="post">
-                        <div class="card-header"><h1 class="text-center text-info">Login</h1></div>
+                             <div class="card-title">
+                             <b><h1 class="text-center text-info">Login</h1></b>
+                             </div>
+                             <div class="card-body">
                             <div class="form-group">
-                                <label for="username" class="text-info"><h3>Usuario:</h3></label><br>
+                                <label for="username" class="text-info"><i class="fas fa-user"></i><h3>Usuario:</h3></label><br>
                                 <input type="text" name="usua_login" class="form-control"  placeholder="Ingrese los nombres" required> 
                                 <div class="valid-feedback"></div>
                                 <div class="invalid-feedback">Escriba su nombre</div>
@@ -27,11 +31,13 @@
                                 <div class="invalid-feedback">Escriba su contraseña</div>
                             </div>
                             <button type="submit" class="btn btn-primary btn-lg btn-block">Ingresar</button>
+                  
                         </form>
                          <br> 
                         <a href="<?php echo base_url('Login/formulario')?>" style ="position: right ">
                             <button type="submit" class="btn btn-secondary btn-lg btn-block" >Registrarse</button>
                         </a>
+                        <div>
                     </div>
                     </div>
                 </div>
