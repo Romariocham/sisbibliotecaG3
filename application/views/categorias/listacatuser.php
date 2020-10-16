@@ -15,8 +15,6 @@
    <?php endforeach; ?>
    </tbody>
 </table>
-<a href="<?php  echo base_url();?>Ejemplar/listaejemplar1?"><button type="submit" class="btn btn-secondary">VER EJEMPLARES<i class="fas fa-arrow-circle-right"></i></button></a>
-
 <br>
 
 

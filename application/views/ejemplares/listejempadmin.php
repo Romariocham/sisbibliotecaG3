@@ -11,8 +11,7 @@
         <th>Año</th>
         <th>Pagina</th>
         <th>Categorias</th>
-        <th>Portada</th>
-        <th>Opciones</th>   <!--  <th colspan='2'>opciones</th>-->
+        <th colspan='2'>Opciones</th>   <!--  <th colspan='2'>opciones</th>-->
      </tr>     
    </thead>
 
@@ -25,8 +24,10 @@
         <td><?php echo $row->ejem_anio; ?></td>
         <td><?php echo $row->ejem_paginas; ?></td>
         <td><?php echo $row->cate_nombre; ?></td>
-        <td><img src="<?php echo $row->ejem_img; ?>"></td>-->
-        <td ><a href="<?php  echo base_url();?>Ejemplar/editar?ejem_id=<?php echo $row->ejem_id;?>" > <button type="submit" class="btn btn-warning"><i class="fas fa-edit"></i></button></a><a href="<?php  echo base_url();?>Ejemplar/eliminar?ejem_id=<?php echo $row->ejem_id;?>" > <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button></a> </td> 
+        <td ><a href="<?php  echo base_url();?>Ejemplar/editar?ejem_id=<?php echo $row->ejem_id;?>" > <button type="submit" class="btn btn-warning"><i class="fas fa-edit"></i></button></a>
+        </td>
+        <td>
+          <a href="<?php  echo base_url();?>Ejemplar/eliminar?ejem_id=<?php echo $row->ejem_id;?>" > <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button></a> </td> 
         </tr> 
     <?php endforeach; ?>
    </tbody>
@@ -47,13 +48,13 @@
   ------------------------------------------------------------------------------------------->
 
 <!-----------------------------------------------------------------------------------------------------------------------
-                    Menu: insertar nuevo usuario,  imprimir usuarios en pdf (inicio) -->  
+                    Menu: insertar nuevo ejemplar,  imprimir usuarios en pdf (inicio) -->  
 <br>
 <nav class="navbar navbar-light" style="background-color: #FFFFFF;">
-<a href="<?php echo base_url('Ejemplar/insertar')?>"> <button type="submit" class="btn btn-success">Insertar nuevo ejemplar</button> </a>
+<a class="nav-item nav-link" href="<?php echo base_url('Ejemplar/insertar') ?>"><button type="submit" class="btn btn-success">INSERTAR NUEVO EJEMPLARES <i class="fas fa-user-plus"></i></button></a>
 
-<a class="nav-item nav-link" href="<?php echo base_url('Reportes') ?>"><button type="submit" class="btn btn-success">IMPRIMIR LISTA DE EJEMPLARES</button></a>
+<a class="nav-item nav-link" href="<?php echo base_url('Reportes') ?>"><button type="submit" class="btn btn-success">IMPRIMIR LISTA DE EJEMPLARES <i class="fas fa-print"></i></button></a>
 </nav>
 
-                     <!--Menu: insertar nuevo usuario,  imprimir usuarios en pdf "falta aumentar" e (final)
+                     <!--Menu: insertar nuevo usuario,  imprimir usuarios en pdf  e (final)
 -------------------------------------------------------------------------------------------------------------------------->   

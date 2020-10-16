@@ -6,7 +6,6 @@ class Model_ejemplar extends CI_Model {
         {
         $query = $this->db->get('ejemplar', 10);
         return $query->result();
-
         }
 
        public function  guardar($data){

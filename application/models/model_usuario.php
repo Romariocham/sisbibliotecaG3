@@ -4,7 +4,7 @@ class Model_usuario extends CI_Model {
 
         public function consultar()
         {
-                $query = $this->db->get('usuario', 10);
+                $query = $this->db->get('usuario');
                 return $query->result();
 
         }

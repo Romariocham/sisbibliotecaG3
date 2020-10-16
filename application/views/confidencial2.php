@@ -40,7 +40,8 @@
 </table>
 </div>
    <br>
-   <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+
+   <nav class="navbar navbar-light" style="background-color: #FFFFFF;">
    <a href="<?php echo base_url('Login/insertar')?>"> <button type="submit" class="btn btn-primary"><i class="fas fa-user-plus"></i></button> </a>
    <!--para imprimir a los usuarios -->
     <a class="nav-item nav-link" href="<?php echo base_url('Reportes/imprimeusuarios') ?>"><button type="submit" class="btn btn-success">IMPRIMIR LISTA DE USUARIOS</button></a>

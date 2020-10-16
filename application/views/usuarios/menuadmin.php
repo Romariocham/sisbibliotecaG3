@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-       <a class="nav-item nav-link" href="<?php echo base_url() ?>"><h3>INICIO</h3></a>
-       <a class="nav-item nav-link" href="<?php echo base_url('Welcome/confidencial2') ?>"><h3>USUARIOS</h3></a>
-       <a class="nav-item nav-link" href="<?php echo base_url('Categorias') ?>"><h3>CATEGORIAS</h3></a>
-       <a class="nav-item nav-link" href="<?php echo base_url('Ejemplar/listaejemplar') ?>"><h3>EJEMPLARES</h3></a>
-       <a class="nav-item nav-link" href="<?php echo base_url('Ejemplar/insertar') ?>"><h3>NUEVO LIBRO</h3></a>
-       <a class="nav-item nav-link" href="<?php echo base_url('Login/salir') ?>"><h3>SALIR</h3></a>
-=======
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <body style="background-color:#E9FEFF">
@@ -23,16 +14,18 @@
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url('Categorias') ?>"><h4><b>CATEGORIAS</b></h4></a>
       </li>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url('Ejemplar/listaejemplar') ?>"><h4><b>EJEMPLAR</b></h4></a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url('Welcome/confidencial2') ?>"><h4><b>USUARIOS</b></h4></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url('Ejemplar/insertar') ?>"><h4><b>NUEVO LIBRO</b></h4></a>
       </li>
-    </ul>
-    <a class="nav-link" href="<?php echo base_url('Login/salir') ?>"><img src="https://image.flaticon.com/icons/png/512/56/56805.png" style="height:45px"></a>
+      <a class="nav-link" href="<?php echo base_url('Login/salir') ?>"><img src="https://image.flaticon.com/icons/png/512/56/56805.png" style="height:45px"></a>
   </div>
->>>>>>> a78ea1962067188a66f072a4e5baf15fc9950cef
 </nav>
 </body>
 
